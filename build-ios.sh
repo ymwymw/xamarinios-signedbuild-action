@@ -70,7 +70,7 @@ then
 fi
 
 cd "$CSPROJ_DIR" || exit 1
-msbuild "$CSPROJ_FILENAME" /verbosity:normal /t:Rebuild /p:Platform=iPhone /p:Configuration="$CONFIGURATION" /p:BuildIpa=true
+dotnet msbuild "$CSPROJ_FILENAME" /verbosity:normal /t:Rebuild /p:Platform=iPhone /p:Configuration="$CONFIGURATION" /p:BuildIpa=true
 
 # Clean up
 rm ~/Library/MobileDevice/Provisioning\ Profiles/CI.mobileprovision
